@@ -1,0 +1,32 @@
+# OpenShift Chat Assistant Configuration
+# Compare with LCS: lightspeed-stack.yaml / run.yaml
+#
+# Set APP_CONFIG_PATH=config.yaml to use this file.
+# Without it, the app uses Pydantic defaults.
+
+name: "OpenShift Chat Assistant"
+host: "0.0.0.0"
+port: 8080
+
+llama_stack:
+  # Point this to a running Llama Stack server
+  # If not available, the app falls back to mock responses
+  url: "http://localhost:5001"
+  model: "meta-llama/Llama-3.2-3B-Instruct"
+  timeout: 120
+
+knowledge_base:
+  enabled: true
+  # Lower threshold = more results (but less relevant)
+  # Higher threshold = fewer results (but more precise)
+  similarity_threshold: 0.3
+
+cors:
+  allow_origins: ["*"]
+  allow_methods: ["*"]
+  allow_headers: ["*"]
+
+auth:
+  # Set to true and provide an API key for production
+  enabled: false
+  api_key: "dev-key-12345"
