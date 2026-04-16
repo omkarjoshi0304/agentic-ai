@@ -1,6 +1,6 @@
 # OpenShift Chat Assistant
 
-A learning project that teaches **FastAPI**, **Pydantic**, **Llama Stack**, and the **Lightspeed Stack architecture** by building a simplified AI chat assistant for OpenShift.
+A learning project that teaches **Llama Stack**, and the **Lightspeed Stack architecture** by building a simplified AI chat assistant for OpenShift.
 
 ## Architecture
 
